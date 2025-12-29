@@ -25,7 +25,7 @@ jobs:
         run: |
           find Locations -name "*.md" | while read file; do
             html="${file%.md}.html"
-            npx markdown-to-html-cli "$file" -o "$html"
+            npx markdown-to-html-cli --source "$file" --output "$html"
           done
 
       - name: Deploy to main
