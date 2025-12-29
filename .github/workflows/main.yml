@@ -20,10 +20,3 @@ jobs:
         with:
           source: Main page.md
           output: html/Main-page.html
-
-      - name: Deploy to html branch
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./html
-          publish_branch: html
