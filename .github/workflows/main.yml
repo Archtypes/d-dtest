@@ -1,2 +1,30 @@
-- name: Converts markdown text to HTML
-  uses: jaywcjlove/markdown-to-html-cli@v5.0.3
+name: Build HTML from Markdown
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Convert Markdown to HTML
+        uses: jaywcjlove/markdown-to-html-cli@v4
+        with:
+          source: .
+          output: html
+          extension: md
+
+      - name: Deploy to html branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./html
+          publish_branch: html
