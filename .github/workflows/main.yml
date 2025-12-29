@@ -21,11 +21,12 @@ jobs:
           source: Main page.md
           output: Main-page.html
 
-      - name: Convert Markdown to HTML Locations
-        uses: jaywcjlove/markdown-to-html-cli@v5.0.3
-        with:
-          source: Locations/.
-          output: Locations/.
+      - name: Convert Markdown to HTML (Locations)
+        run: |
+          find Locations -name "*.md" | while read file; do
+            html="${file%.md}.html"
+            npx markdown-to-html-cli "$file" -o "$html"
+          done
 
       - name: Deploy to main
         uses: peaceiris/actions-gh-pages@v4
