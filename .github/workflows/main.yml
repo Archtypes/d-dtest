@@ -19,7 +19,7 @@ jobs:
         uses: jaywcjlove/markdown-to-html-cli@v5.0.3
         with:
           source: Main page.md
-          output: html/Main-page.html
+          output: Main-page.html
 
       - name: Deploy to main
         uses: peaceiris/actions-gh-pages@v4
