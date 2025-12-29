@@ -137,13 +137,21 @@
                 "file": "Main page.md"
               }
             }
+          },
+          {
+            "id": "8815d4417e64565e",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -156,7 +164,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c341a5599581adc6",
+  "active": "8815d4417e64565e",
   "lastOpenFiles": [
     "html/Main-page.html",
     "html/Nuevo Documento de texto.txt",
