@@ -20,7 +20,6 @@ jobs:
         with:
           source: .
           output: html
-          extension: md
 
       - name: Deploy to html branch
         uses: peaceiris/actions-gh-pages@v4
